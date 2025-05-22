@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+body {
+    margin: 0;
+    background: black;
+    height: 300vh;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    margin: 0;
+}
+
+
+#canvas-container {
+    height: 100vh; 
+
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+#hero-scroll-container {
+    width: 100vw;
+    height: 100vh;  
+}
+
+.hero-scroll-wrapper {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    border: 1px solid red;
+
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    color: white;
+    font-weight: 200;
+}

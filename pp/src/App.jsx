@@ -1,10 +1,14 @@
 import './App.css'
+import Hero from './components/Hero'
 
 function App() {
 
   return (
     <>
-      <div>hi</div>
+      <div id="canvas-container">
+        <Hero></Hero>
+
+      </div>
     </>
   )
 }
