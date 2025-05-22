@@ -21,7 +21,6 @@ html {
 #canvas-container {
     height: 100vh; 
 
-    border: 1px solid red;
     box-sizing: border-box;
 }
 
@@ -35,7 +34,6 @@ html {
     height: 100%;
     margin: 0 auto;
 
-    border: 1px solid red;
 }
 
 .header {
