@@ -89,6 +89,10 @@ function Hero() {
 
 
             <RectLight/>
+            <RectLight/>
+            <RectLight/>
+            <RectLight/>
+            <RectLight/>
             {/* <gridHelper args={[100, 50]} /> */}
             <ambientLight intensity={0.7} />
             <Light></Light> 
