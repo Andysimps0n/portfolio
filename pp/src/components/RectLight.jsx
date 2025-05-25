@@ -8,9 +8,13 @@ import { useRef,useEffect } from 'react';
 
 export function RectLight() {
     
-    const lightRef = useRef()
+    const redRef = useRef()
+    const greenRef = useRef()
+    const blueRef = useRef()
 
-    useHelper(lightRef, RectAreaLightHelper)
+    // useHelper(redRef, RectAreaLightHelper)
+    // useHelper(greenRef, RectAreaLightHelper)
+    // useHelper(blueRef, RectAreaLightHelper)
 
 
   return (
@@ -18,36 +22,36 @@ export function RectLight() {
     <>
         {/* red */}
         <rectAreaLight
-        ref={lightRef}
+        ref={redRef}
         intensity={4}
-        color= "#0xff0000"
-        width={10}
-        height={10}
-        position={[-10, 0, 7]}
+         color="hsl(4, 100.00%, 50.00%)"
+        width={40}
+        height={50}
+        position={[0, 0, 16]}
         lookAt={[0, 0, 0]} 
         />
         {/* green */}
-        {/* <rectAreaLight
-        ref={lightRef}
+        <rectAreaLight
+        ref={greenRef}
         intensity={5}
-        color="0x00ff00"
-        width={4}
+        color="hsl(4, 100.00%, 50.00%)"
+        width={5}
         height={10}
-        position={[-10, 0, 5]}
+        position={[-6, 0, 5]}
         lookAt={[0, 0, 0]} 
-        /> */}
+        />
 
 
         {/* blue */}
-        {/* <rectAreaLight
-        ref={lightRef}
+        <rectAreaLight
+        ref={blueRef}
         intensity={5}
-        color="0xff0000"
-        width={4}
+        color="hsl(4, 100.00%, 50.00%)"
+        width={5}
         height={10}
-        position={[-10, 0, 5]}
+        position={[-14, 0, 5]}
         lookAt={[0, 0, 0]}
-        /> */}
+        />
     
     
     </>

@@ -12,8 +12,8 @@ export function Torus() {
     })
 
     return (
-        <mesh position={[-10, 0, 0]} ref={torusRef}>
-            <torusKnotGeometry args={[3, 1, 100, 100]}></torusKnotGeometry>
+        <mesh position={[0, 0, 0]} ref={torusRef}>
+            <torusKnotGeometry args={[10, 2, 100, 100]}></torusKnotGeometry>
             <meshStandardMaterial metalness={0.9} roughness={0.1} color="white"></meshStandardMaterial>
         </mesh>
     )

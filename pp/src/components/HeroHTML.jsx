@@ -2,27 +2,42 @@ import React from 'react'
 
 function HeroHTML() {
   return (
-    <div id="hero-scroll-container">
-        <div className="hero-scroll-wrapper">
+          <>
+            {/* header */}
             <div className="header">
                 <div className="header-text">Andy kim</div>
                 <div className="header-text">Contents</div>
             </div>
+            {/* upper content */}
+            <div className="hero-upper-wrapper">
+              {/* Desire to create, <br></br>
+              Dedicated to find */}
+              --------------------
+            </div>
+
+
+            {/* content1 - Left */}
             <div className="content">
-              <div>Contents</div>
-              <div>About</div>
-              <div>projects</div>
-              <div>Interests</div>
-              <div>Contents</div>
+              <div className="blur">
+                <div>Contents</div>
+                <div>About</div>
+                <div>projects</div>
+                <div>Interests</div>
+                <div>Contents</div>
+              </div>
             </div>
-            <div className="content" style={{textAlign : 'right'}}>
-              <div>Github</div>
-              <div>Instargram</div>
-              <div>010-1234-1234</div>
-              <div>LinkedIn</div>
+
+            {/* content2 - Right */}
+            <div className="content right-content" style={{textAlign : 'right'}}>
+              <div className="blur">
+                    <div>Github</div>
+                    <div>Instargram</div>
+                    <div>010-1234-1234</div>
+                    <div>LinkedIn</div>
+              </div>
             </div>
-        </div>
-    </div>
+          </>
+
   )
 }
 
