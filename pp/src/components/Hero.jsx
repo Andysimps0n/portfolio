@@ -1,11 +1,19 @@
+//  Module Imports
 import React, { useEffect, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, Scroll, ScrollControls, useHelper   } from '@react-three/drei'
 import { DirectionalLightHelper, Group, RectAreaLight } from 'three'
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
 
+
+
+//  HTML Components
 import HeroHTML from './HeroHTML';
 import About from './About'
+import Projects from './Projects';
+
+
+// R3F Components
 import {RectLight} from './RectLight';
 import {Torus} from './Torus'
 
@@ -17,7 +25,7 @@ function Hero() {
 
   return (
     <>
-        <Canvas camera={{position : [0, 5, -20]}}>
+        <Canvas camera={{position : [0, 0, -20]}}>
 
 
             <ScrollControls pages={10} damping={0} style={{ scrollbarWidth: 'none' }}>
@@ -29,7 +37,8 @@ function Hero() {
                     <div id="scroll-container">
                         <div className="scroll-wrapper">
                             <HeroHTML></HeroHTML>
-                            <About></About>
+                            <Projects></Projects>
+                            {/* <About></About> */}
                         </div>
                     </div>
                 </Scroll>
@@ -37,8 +46,8 @@ function Hero() {
 
 
             {/* <gridHelper args={[100, 50]} /> */}
-            <ambientLight intensity={0.4} />
             <OrbitControls enableZoom={false}></OrbitControls>
+            <ambientLight intensity={0.4} />
         </Canvas>
     </>
   )

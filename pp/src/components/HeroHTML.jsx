@@ -12,7 +12,8 @@ function HeroHTML() {
             <div className="hero-upper-wrapper">
               {/* Desire to create, <br></br>
               Dedicated to find */}
-              --------------------
+              Curiocity Driven, <br/>
+              Creativity Fueled
             </div>
 
 
