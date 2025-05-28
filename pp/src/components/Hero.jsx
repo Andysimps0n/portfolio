@@ -19,6 +19,12 @@ import {Torus} from './Torus'
 
 function Hero() {
 
+    const projectRef = useRef();
+
+    const handleScroll = () => {
+        projectRef.current?scrollIntoView({ behavior : 'smooth' })
+    }
+
     useEffect(() => {
     RectAreaLightUniformsLib.init();
     }, []);
@@ -36,8 +42,8 @@ function Hero() {
                 <Scroll html>
                     <div id="scroll-container">
                         <div className="scroll-wrapper">
-                            <HeroHTML></HeroHTML>
-                            <Projects></Projects>
+                            <HeroHTML handleScroll={handleScroll}></HeroHTML>
+                            <Projects projectRef={projectRef}></Projects>
                             {/* <About></About> */}
                         </div>
                     </div>

@@ -21,8 +21,8 @@ function HeroHTML() {
             <div className="content">
               <div className="blur">
                 <div>Contents</div>
-                <div>About</div>
                 <div>projects</div>
+                <div>About</div>
                 <div>Interests</div>
                 <div>Contents</div>
               </div>
