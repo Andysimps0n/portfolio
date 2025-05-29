@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HeroHTML() {
+function HeroHTML({handleScroll}) {
   return (
           <>
             {/* header */}
@@ -21,7 +21,7 @@ function HeroHTML() {
             <div className="content">
               <div className="blur">
                 <div>Contents</div>
-                <div>projects</div>
+                <div onClick={handleScroll}>projects</div>
                 <div>About</div>
                 <div>Interests</div>
                 <div>Contents</div>

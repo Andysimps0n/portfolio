@@ -22,7 +22,7 @@ function Hero() {
     const projectRef = useRef();
 
     const handleScroll = () => {
-        projectRef.current?scrollIntoView({ behavior : 'smooth' })
+        projectRef.current.scrollIntoView({ behavior : 'smooth' })
     }
 
     useEffect(() => {
