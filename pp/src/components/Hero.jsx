@@ -40,12 +40,6 @@ function Hero() {
     }
     const projectRef = useRef();
 
-    const handleScroll = () => {
-        scroll.el.scrollTo({
-        top: scroll.el.scrollHeight * 0.25,
-        behavior: 'smooth',
-        });
-    }
 
     useEffect(() => {
     RectAreaLightUniformsLib.init();
@@ -53,7 +47,7 @@ function Hero() {
 
   return (
         <Canvas camera={{position : [0, 0, -20]}}>
-            <ScrollControls pages={5} damping={0} >
+            <ScrollControls style={{scrollbarWidth : "none"}} pages={5} damping={0} >
                 <Scroll>
                     <ScrollLogger></ScrollLogger>
                     <Torus></Torus>
@@ -62,7 +56,7 @@ function Hero() {
                 <Scroll html>
                     <div id="scroll-container">
                         <div className="scroll-wrapper">
-                            <HeroHTML handleScroll={handleScroll}></HeroHTML>
+                            <HeroHTML></HeroHTML>
                             <Projects></Projects>
                             {/* <About></About> */}
                         </div>
