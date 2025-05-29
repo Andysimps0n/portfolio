@@ -1,10 +1,9 @@
 //  Module Imports
 import React, { useEffect, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Scroll, ScrollControls, useHelper   } from '@react-three/drei'
+import { OrbitControls, Scroll, ScrollControls, useScroll   } from '@react-three/drei'
 import { DirectionalLightHelper, Group, RectAreaLight } from 'three'
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
-
 
 
 //  HTML Components
@@ -18,7 +17,12 @@ import {RectLight} from './RectLight';
 import {Torus} from './Torus'
 
 function Hero() {
+    const scroll = useScroll();
 
+    // Read current scroll offset (0 to 1)
+    // useFrame(() => {
+    //     console.log(scroll.offset); // 0 = top, 1 = bottom
+    // });
     const projectRef = useRef();
 
     const handleScroll = () => {
@@ -34,7 +38,7 @@ function Hero() {
         <Canvas camera={{position : [0, 0, -20]}}>
 
 
-            <ScrollControls pages={10} damping={0} style={{ scrollbarWidth: 'none' }}>
+            <ScrollControls style={{scrollbarWidth : 'none'}} spages={4} damping={0} >
                 <Scroll>
                     <Torus></Torus>
                     <RectLight></RectLight>
