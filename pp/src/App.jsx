@@ -9,7 +9,7 @@ function App() {
     <>
       <div id="canvas-container">
         <Hero></Hero>
-        <Projects></Projects>
+        {/* <Projects></Projects> */}
       </div>
     </>
   )

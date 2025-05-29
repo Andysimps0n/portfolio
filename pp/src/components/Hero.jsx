@@ -1,7 +1,7 @@
 //  Module Imports
 import React, { useEffect, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Scroll, ScrollControls, useHelper   } from '@react-three/drei'
+import { OrbitControls, Scroll, ScrollControls, useHelper, useScroll   } from '@react-three/drei'
 import { DirectionalLightHelper, Group, RectAreaLight } from 'three'
 import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
 
@@ -19,10 +19,32 @@ import {Torus} from './Torus'
 
 function Hero() {
 
+    
+    function ScrollLogger() {
+        const scroll = useScroll();
+        let functionSwitch = true
+
+        useFrame(() => {
+            let scrollRounded = Math.ceil(scroll.offset * 100) / 100
+            console.log(scrollRounded); // 0 = top, 1 = bottom
+
+            if (scrollRounded >= 0.4 && functionSwitch) {
+                scroll.el.scrollTo({
+                top: scroll.el.scrollHeight * 0.2,
+                behavior: 'smooth',});
+                functionSwitch = false
+            }
+        });
+
+        return null
+    }
     const projectRef = useRef();
 
     const handleScroll = () => {
-        projectRef.current.scrollIntoView({ behavior : 'smooth' })
+        scroll.el.scrollTo({
+        top: scroll.el.scrollHeight * 0.25,
+        behavior: 'smooth',
+        });
     }
 
     useEffect(() => {
@@ -30,12 +52,10 @@ function Hero() {
     }, []);
 
   return (
-    <>
         <Canvas camera={{position : [0, 0, -20]}}>
-
-{/* style={{ scrollbarWidth: 'none' }} */}
             <ScrollControls pages={5} damping={0} >
                 <Scroll>
+                    <ScrollLogger></ScrollLogger>
                     <Torus></Torus>
                     <RectLight></RectLight>
                 </Scroll>
@@ -43,6 +63,7 @@ function Hero() {
                     <div id="scroll-container">
                         <div className="scroll-wrapper">
                             <HeroHTML handleScroll={handleScroll}></HeroHTML>
+                            <Projects></Projects>
                             {/* <About></About> */}
                         </div>
                     </div>
@@ -54,7 +75,6 @@ function Hero() {
             <OrbitControls enableZoom={false}></OrbitControls>
             <ambientLight intensity={0.4} />
         </Canvas>
-    </>
   )
 }
 
