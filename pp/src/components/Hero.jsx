@@ -33,8 +33,8 @@ function Hero() {
     <>
         <Canvas camera={{position : [0, 0, -20]}}>
 
-
-            <ScrollControls pages={10} damping={0} style={{ scrollbarWidth: 'none' }}>
+{/* style={{ scrollbarWidth: 'none' }} */}
+            <ScrollControls pages={5} damping={0} >
                 <Scroll>
                     <Torus></Torus>
                     <RectLight></RectLight>
@@ -43,7 +43,6 @@ function Hero() {
                     <div id="scroll-container">
                         <div className="scroll-wrapper">
                             <HeroHTML handleScroll={handleScroll}></HeroHTML>
-                            <Projects projectRef={projectRef}></Projects>
                             {/* <About></About> */}
                         </div>
                     </div>
