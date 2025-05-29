@@ -1,6 +1,18 @@
 import React from 'react'
+import { useScroll } from '@react-three/drei';
 
-function HeroHTML({handleScroll}) {
+
+function HeroHTML() {
+
+      const scroll = useScroll();
+
+      function handleScroll(target) {
+        scroll.el.scrollTo({
+        top: scroll.el.scrollHeight * target,
+        behavior: 'smooth',
+        });
+    }
+
   return (
           <>
             {/* header */}
@@ -21,7 +33,7 @@ function HeroHTML({handleScroll}) {
             <div className="content">
               <div className="blur">
                 <div>Contents</div>
-                <div onClick={handleScroll}>projects</div>
+                <div onClick={()=>{handleScroll(0.225)}}>projects</div>
                 <div>About</div>
                 <div>Interests</div>
                 <div>Contents</div>
