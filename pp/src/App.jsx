@@ -1,5 +1,5 @@
 import './App.css'
-import Hero from './components/Hero'
+import Hero from './components/Main'
 import Projects from './components/Projects'
 
 

@@ -35,14 +35,14 @@ function Projects({projectRef}) {
                 </div>
             </div>
 
-
+{/* 
             <div onClick={() => window.open('https://mbti-andysimps0ns-projects.vercel.app/', '_blank')}>
                 <div className="project-picture-container" id="project-pic4"></div>
                 <div className="project-grid-text-wrapper">
                   <div className="text3">Maslow's hiearchy of needs</div>
                   <div className="text4">Testing Maslow's hiearchy of needs with basic questions</div>
                 </div>
-            </div>
+            </div> */}
 
 
         </div>

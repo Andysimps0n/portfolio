@@ -17,28 +17,6 @@ import {RectLight} from './RectLight';
 import {Torus} from './Torus'
 
 function Hero() {
-    const scroll = useScroll();
-    
-    function ScrollLogger() {
-        const scroll = useScroll();
-        let functionSwitch = true
-
-        useFrame(() => {
-            let scrollRounded = Math.ceil(scroll.offset * 100) / 100
-            console.log(scrollRounded); // 0 = top, 1 = bottom
-
-
-            if (scrollRounded >= 0.4 && functionSwitch) {
-                scroll.el.scrollTo({
-                top: scroll.el.scrollHeight * 0.2,
-                behavior: 'smooth',});
-                functionSwitch = false
-            }
-        });
-
-        return null
-    }
-    const projectRef = useRef();
 
 
     useEffect(() => {
@@ -50,7 +28,6 @@ function Hero() {
             <ScrollControls style={{scrollbarWidth : "none"}} pages={5} damping={0} >
 
                 <Scroll>
-                    <ScrollLogger></ScrollLogger>
                     <Torus></Torus>
                     <RectLight></RectLight>
                 </Scroll>
@@ -58,15 +35,15 @@ function Hero() {
                     <div id="scroll-container">
                         <div className="scroll-wrapper">
                             <HeroHTML></HeroHTML>
+                            <About></About>
                             <Projects></Projects>
-                            {/* <About></About> */}
                         </div>
                     </div>
                 </Scroll>
             </ScrollControls>
 
 
-            {/* <gridHelper args={[100, 50]} /> */}
+            {/* <gridHelper position={[0, -20, 0]} args={[400, 30]} /> */}
             <OrbitControls enableZoom={false}></OrbitControls>
             <ambientLight intensity={0.4} />
         </Canvas>

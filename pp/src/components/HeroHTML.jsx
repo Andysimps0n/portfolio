@@ -43,7 +43,7 @@ function HeroHTML() {
             {/* content2 - Right */}
             <div className="content right-content" style={{textAlign : 'right'}}>
               <div className="blur">
-                    <div>Github</div>
+                    <div onClick={() => window.open('https://github.com/Andysimps0n', '_blank')}>Github</div>
                     <div>Instargram</div>
                     <div>010-1234-1234</div>
                     <div>LinkedIn</div>
