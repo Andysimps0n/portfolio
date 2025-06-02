@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='html-wrapper about-outer-wrapper border'>
+    <div className='html-wrapper about-outer-wrapper'>
 
 
       {/* Card Component */}
@@ -15,8 +15,10 @@ function About() {
             <div className="subtext">Woncheon Hana Christian Academy</div>
           </div>
         </div>
-        <div className="card content border">
+        <div className="card content">
           I'm a software engineer who loves to learn and create visuals to people. <br />
+          My first web developing experience was in 2023, where I learned the basics of HTML, CSS and Javascript.
+          And then at 2024, I started my journey of Next.js, React.js, Github and Three.js. Also, I was active in a developer community by participating a meet-up where I watched other devloper's presentation of thier career and had feed backs with experienced developers   . 
         </div>
       </div>
 
