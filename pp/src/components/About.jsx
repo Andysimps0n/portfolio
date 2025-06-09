@@ -16,14 +16,15 @@ function About() {
           </div>
         </div>
         <div className="card content">
-          I'm a software engineer who loves to learn and create visuals to people. <br />
+          Hello! I'm a software engineer who loves to learn and create visuals to people. <br />
           My first web developing experience was in 2023, where I learned the basics of HTML, CSS and Javascript.
-          And then at 2024, I started my journey of Next.js, React.js, Github and Three.js. Also, I was active in a developer community by participating a meet-up where I watched other devloper's presentation of thier career and had feed backs with experienced developers   . 
+          And then at 2024, I started my journey of Next.js, React.js, Github and Three.js. Also, I was active in a developer community by participating a meet-up where I watched other devloper's presentation of thier career and had feed backs with other experienced developers   . 
         </div>
       </div>
 
       {/* Video */}
-      <div className='border' id="about-video"></div>
+      <video loop autoPlay muted src="/video.mp4" className='' id="about-video"></video>
+
     </div>
   )
 }

@@ -220,8 +220,8 @@ html {
     aspect-ratio: 16 / 9;
     display: inline-block;
 
-    background-image: url('/work.png');
-    background-size: cover;
+    /* background-image: url('/work.png');
+    background-size: cover; */
 }
 
 .about-container {
