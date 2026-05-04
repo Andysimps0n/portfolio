@@ -44,9 +44,9 @@ function HeroHTML() {
             <div className="content right-content" style={{textAlign : 'right'}}>
               <div className="blur">
                     <div onClick={() => window.open('https://github.com/Andysimps0n', '_blank')}>Github</div>
-                    <div>Instargram</div>
-                    <div>010-1234-1234</div>
-                    <div>LinkedIn</div>
+                    <div >@rlabmscks0714</div>
+                    <div>010-5604-0854</div>
+                    <div>rladmscks0714@gmail.com</div>
               </div>
             </div>
           </>

@@ -25,7 +25,7 @@ function Hero() {
 
   return (
         <Canvas camera={{position : [0, 0, -20]}}>
-            <ScrollControls style={{scrollbarWidth : "none"}} pages={5} damping={0} >
+            <ScrollControls style={{scrollbarWidth : "none"}} pages={4} damping={0.01} >
 
                 <Scroll>
                     <Torus></Torus>
