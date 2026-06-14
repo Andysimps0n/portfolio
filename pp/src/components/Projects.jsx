@@ -10,12 +10,6 @@ function Projects({projectRef}) {
       imgId: "project-pic1"
     },
     {
-      title: "Flame Test",
-      desc: "3D display of flames of chemical, revealing the flame color an element",
-      url: "https://flame-color-of-elements-using-three-js.vercel.app/",
-      imgId: "project-pic2"
-    },
-    {
       title: "Drowsiness Detection",
       desc: "Alarm combined with timer that awakes sleepy users",
       url: "https://mediapipe1.vercel.app/",
@@ -32,6 +26,12 @@ function Projects({projectRef}) {
       desc: "Use of Tensorflow.js to visualize error graph on hyperparameters",
       url: "https://ml-web-nine.vercel.app/",
       imgId: "project-pic5"
+    },
+    {
+      title: "Meme detection",
+      desc: "Detecting memes from images using Mediapipe",
+      url: "https://meme-detection.vercel.app/",
+      imgId: "project-pic6"
     },
   ];
 

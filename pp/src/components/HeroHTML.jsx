@@ -15,38 +15,36 @@ function HeroHTML() {
 
   return (
           <>
-            {/* header */}
             <div className="header">
                 <div className="header-text">Andy kim</div>
                 <div className="header-text">Contents</div>
             </div>
-            {/* upper content */}
             <div className="hero-upper-wrapper">
-              {/* Desire to create, <br></br>
-              Dedicated to find */}
-              Curiocity Driven, <br/>
-              Creativity Fueled
+              <h1 className="hero-title">
+                <span className="hero-title-line hero-title-accent">Curiosity Driven,</span>
+                <span className="hero-title-line hero-title-accent">Creativity Fueled</span>
+              </h1>
             </div>
 
-
-            {/* content1 - Left */}
             <div className="content">
-              <div className="blur">
-                <div>Contents</div>
-                <div onClick={()=>{handleScroll(0.225)}}>projects</div>
-                <div>About</div>
-                <div>Interests</div>
-                <div>Contents</div>
+              <div className="blur-box">
+                <div className="blur-box-title">Contents</div>
+                <div className="blur-box-items">
+                  <div className="blur-link" onClick={() => handleScroll(0.225)}>projects</div>
+                  <div className="blur-item">About</div>
+                </div>
               </div>
             </div>
 
-            {/* content2 - Right */}
-            <div className="content right-content" style={{textAlign : 'right'}}>
-              <div className="blur">
-                    <div onClick={() => window.open('https://github.com/Andysimps0n', '_blank')}>Github</div>
-                    <div >@rlabmscks0714</div>
-                    <div>010-5604-0854</div>
-                    <div>rladmscks0714@gmail.com</div>
+            <div className="content right-content">
+              <div className="blur-box blur-box-right">
+                <div className="blur-box-title">Contact</div>
+                <div className="blur-box-items">
+                  <div className="blur-link" onClick={() => window.open('https://github.com/Andysimps0n', '_blank')}>Github</div>
+                  <div className="blur-item">@rlabmscks0714</div>
+                  <div className="blur-item">010-5604-0854</div>
+                  <div className="blur-item">rladmscks0714@gmail.com</div>
+                </div>
               </div>
             </div>
           </>

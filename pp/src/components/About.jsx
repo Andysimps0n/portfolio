@@ -2,29 +2,30 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='html-wrapper about-outer-wrapper'>
-
-
-      {/* Card Component */}
-      <div className="card">
-        <div className="header">
-          <div className="profile-picture border"></div>
-          <div className="profile-text-wrapper">
-            <div className="name">Andy Kim</div>
-            <div className="subtext">Software Engineer</div>
-            {/* <div className="subtext">Woncheon Hana Christian Academy</div> */}
-          </div>
-        </div>
-        <div className="card content">
-          Hello! I'm a software engineer who loves to learn and create visuals to people. <br />
-          {/* My first web developing experience was in 2023, where I learned the basics of HTML, CSS and Javascript. */}
-          {/* And then at 2024, I started my journey of Next.js, React.js, Github and Three.js. Also, I was active in a developer community by participating a meet-up where I watched other devloper's presentation of thier career and had feed backs with other experienced developers   .  */}
-        </div>
+    <div className="html-wrapper about-section">
+      <div className="about-header">
+        <div className="about-title">About</div>
       </div>
 
-      {/* Video */}
-      {/* <video loop autoPlay muted src="/video.mp4" className='' id="about-video"></video> */}
+      <div className="about-card">
+        <div className="about-profile">
+          <div className="about-avatar border" />
+          <div className="about-name">Andy Kim</div>
+          <div className="about-role">Software Engineer</div>
+        </div>
 
+        <div className="about-body">
+          <p className="about-bio">
+            Hello! I'm a software engineer who loves to learn and build interactive visuals on the web.
+            I work with React and Three.js to turn ideas into 3D experiences, and I enjoy growing through side projects and developer communities.
+          </p>
+          {/* <div className="about-tags">
+            <span>React</span>
+            <span>Three.js</span>
+            <span>Next.js</span>
+          </div> */}
+        </div>
+      </div>
     </div>
   )
 }
